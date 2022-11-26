@@ -18,7 +18,7 @@ webpage = content.text
 # Supply the name you would like for the file
 def createFile(filename):
     if not args.output:
-        f = open(f"{args.title}.md", "w")
+        f = open(f"{filename}.md", "w")
         f.write(md(webpage, strip=['a']))
         f.close()
     else:
