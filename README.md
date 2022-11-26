@@ -21,5 +21,13 @@ python websiteToMarkdown --website 'google.com'
 If it cannot find a title, it will ask you to supply --title:
 
 ```bash
-python websiteToMarkdown --webiste 'google.com' --title 'asdf'
+python websiteToMarkdown --website 'google.com' --title 'asdf'
 ```
+
+You can also specify an output folder:
+
+```bash
+python websiteToMarkdown --website 'google.com' --output notes/
+```
+
+This will be appended to your home directory. With the example given above, $HOME/notes/
