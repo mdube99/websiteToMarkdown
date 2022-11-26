@@ -2,11 +2,7 @@
 
 Create a markdown file from a website. Simply supply the website with the argument --website, and it will output the markdown equivalent.
 
-{% note %}
-
 **Note:** Requires markdownify library
-
-{% endnote %}
 
 #### Installation:
 
