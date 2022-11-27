@@ -36,7 +36,7 @@ def main():
         matchResult = title.search(webpage)
         if matchResult:
             # supplies the proper title from the matchResult
-            createFile(f"{matchResult.group(1)}.md")
+            createFile({matchResult.group(1)})
         else:
             # If it can't find the title, it will ask the user to use --title
             print("Couldn't find <title> in the webpage, set a manual title with --title")
