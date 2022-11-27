@@ -5,9 +5,9 @@ import os
 from markdownify import markdownify as md
 
 parser = argparse.ArgumentParser()# Add an argument
-parser.add_argument('--website', type=str, required=True)# Parse the argument
-parser.add_argument('--title', type=str, required=False)# Parse the argument
-parser.add_argument('--output', type=str, required=False)# Parse the argument
+parser.add_argument('-w', '--website', type=str, required=True, help='The website that you would like to download as markdown')# Parse the argument
+parser.add_argument('-f', '--filename', type=str, required=False, help='(optional) If you would like to add a specific filename to download as')# Parse the argument
+parser.add_argument('-o' '--output', type=str, required=False, help='(optional) If you would like to specify an output folder. The home directory is already included.')# Parse the argument
 args = parser.parse_args()
 print('website,', args.website)
 
@@ -30,7 +30,7 @@ def createFile(filename):
         f.close()
 
 def main():
-    if not args.title:
+    if not args.filename:
         # Finds the html <title> and stores it in the "title" variable
         title = re.compile("<title>(.*?)</title>")
         matchResult = title.search(webpage)
