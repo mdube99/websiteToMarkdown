@@ -7,7 +7,7 @@ from markdownify import markdownify as md
 parser = argparse.ArgumentParser()# Add an argument
 parser.add_argument('-w', '--website', type=str, required=True, help='The website that you would like to download as markdown')# Parse the argument
 parser.add_argument('-f', '--filename', type=str, required=False, help='(optional) If you would like to add a specific filename to download as')# Parse the argument
-parser.add_argument('-o' '--output', type=str, required=False, help='(optional) If you would like to specify an output folder. The home directory is already included.')# Parse the argument
+parser.add_argument('-o', '--output', type=str, required=False, help='(optional) If you would like to specify an output folder. The home directory is already included.')
 args = parser.parse_args()
 print('website,', args.website)
 
@@ -42,6 +42,6 @@ def main():
             print("Couldn't find <title> in the webpage, set a manual title with --title")
             quit
     else:
-        createFile(args.title)
+        createFile(args.filename)
 
 main()
